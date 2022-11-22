@@ -1,0 +1,13 @@
+@use "./custom.scss" as *;
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.blue-hover {
+  transition: color 0.2s ease-out;
+
+  &:hover {
+    color: map-get($app-colors, app-blue);
+  }
+}

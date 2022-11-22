@@ -1,0 +1,86 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$app-colors: (
+  "app-dark-blue": hsl(243, 87%, 12%),
+  "app-desaturated-blue": hsl(238, 22%, 44%),
+  "app-blue": rgb(48, 101, 248),
+  "app-cyan": rgb(60, 159, 143),
+  "app-grayish-blue": rgb(246, 246, 254),
+  "app-light-gray": rgb(191, 191, 191),
+);
+
+$theme-colors: map-merge($theme-colors, $app-colors);
+
+$app-font-sizes: (
+  "app-xs": 1.2rem,
+  "app-sm": 1.4rem,
+  "app-base": 1.6rem,
+  "app-lg": 1.8rem,
+  "app-xl": 2.2rem,
+  "app-h1": 3.6rem,
+  "app-h2": 3.2rem,
+  "app-h3": 2.6rem,
+);
+
+$font-sizes: map-merge($font-sizes, $app-font-sizes);
+
+$app-spacers: (
+  "app-1": 1rem,
+  "app-2": 2rem,
+  "app-3": 3rem,
+  "app-4": 4rem,
+  "app-5": 5rem,
+  "app-6": 6rem,
+  "app-7": 7rem,
+  "app-8": 8rem,
+  "app-9": 9rem,
+  "app-10": 10rem,
+  "app-20": 20rem,
+);
+
+$spacers: map-merge($spacers, $app-spacers);
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+$new-app-utilities: (
+  "cursor": (
+    property: cursor,
+    class: cursor,
+    responsive: true,
+    values: (
+      "auto": auto,
+      "pointer": pointer,
+      "grab": grab,
+    ),
+  ),
+  "app-list-style": (
+    property: list-style,
+    class: list-style,
+    values: (
+      "none": none,
+    ),
+  ),
+  "width":
+    map-merge(
+      map-get($utilities, width),
+      (
+        responsive: true,
+        values:
+          map-merge(
+            map-get(map-get($utilities, "width"), "values"),
+            (
+              "35rem": 35rem,
+              "25rem": 25rem,
+              "max": max-content,
+            )
+          ),
+      )
+    ),
+);
+
+$utilities: map-merge($utilities, $new-app-utilities);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
