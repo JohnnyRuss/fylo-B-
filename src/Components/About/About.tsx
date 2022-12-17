@@ -17,7 +17,7 @@ const About: React.FC<AboutType> = (props) => {
       className="mt-app-20 px-5 px-xl-0 bg-app-grayish-blue position-relative"
     >
       <span className={styles["bg-figure"]}></span>
-      <Container fluid="xl py-app-5">
+      <Container fluid="xl" className="py-app-5">
         <Row>
           <Col
             lg={6}

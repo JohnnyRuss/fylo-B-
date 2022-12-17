@@ -11,7 +11,7 @@ const Subscribe: React.FC<SubscribeType> = (props) => {
   return (
     <Container
       fluid
-      className="mt-app-8 px-5 px-xl-0 bg-app-desaturated-blue py-app-7"
+      className="mt-app-10 px-5 px-xl-0 bg-app-desaturated-blue py-app-7"
     >
       <Container fluid="xl">
         <Row>
